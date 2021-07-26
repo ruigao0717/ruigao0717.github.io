@@ -1,0 +1,556 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?8bij9n");
+  src: url("../fonts/icomoon.eot?8bij9n#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?8bij9n") format("truetype"), url("../fonts/icomoon.woff?8bij9n") format("woff"), url("../fonts/icomoon.svg?8bij9n#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+html {
+  font-size: 16px;
+}
+
+body {
+  background-color: #e4e2e2;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar {
+    background-color: #4dc8f1;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
+  }
+}
+.navbar .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container {
+    max-width: 1000px;
+  }
+}
+@media only screen and (max-width: 1032px) {
+  .navbar .container {
+    padding: 0 15px;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-name {
+    color: #fff;
+  }
+}
+.navbar .container .navbar-name span {
+  color: #4dc8f1;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-name span {
+    color: #fff;
+  }
+}
+.navbar .container .navbar-titles .navbar-titles__tag {
+  display: none;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles .navbar-titles__tag {
+    display: block;
+  }
+}
+.navbar .container .navbar-titles .navbar-titles__tag:hover {
+  cursor: pointer;
+}
+@media only screen and (min-width: 1281px) {
+  .navbar .container .navbar-titles ul {
+    display: block;
+  }
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles ul {
+    display: none;
+    box-sizing: border-box;
+    width: 200px;
+    height: 726px;
+    position: absolute;
+    top: 69px;
+    right: 0;
+    z-index: 1;
+    padding: 20px;
+    margin: 0;
+    background-color: rgba(67, 191, 232, 0.9);
+    box-shadow: -7px 13px 10px 8px rgba(16, 16, 16, 0.1);
+    text-align: center;
+  }
+}
+.navbar .container .navbar-titles ul li {
+  display: inline-block;
+  list-style: none;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles ul li {
+    display: block;
+  }
+}
+.navbar .container .navbar-titles ul li .titles-page {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  text-decoration: none;
+  color: #868585;
+  transition: all ease 0.3s;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles ul li .titles-page {
+    padding: 20px 40px;
+    margin: 0;
+  }
+}
+.navbar .container .navbar-titles ul li .titles-page:hover {
+  color: #1b1b1b;
+  transition: all ease 0.3s;
+}
+.navbar .container .navbar-titles ul li .titles-page::after {
+  display: block;
+  content: "";
+  width: 0;
+  margin: auto;
+  margin-top: 3px;
+  border-bottom: 3px solid #4dc8f1;
+  transition: width ease-in-out 0.3s;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles ul li .titles-page::after {
+    border-bottom: 3px solid #fff;
+  }
+}
+.navbar .container .navbar-titles ul li .titles-page:hover::after {
+  width: 24px;
+}
+.navbar .container .navbar-titles ul li .active-page {
+  position: relative;
+  display: inline-block;
+  margin-left: 40px;
+  text-decoration: none;
+  color: #1b1b1b;
+  transition: all ease 0.3s;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles ul li .active-page {
+    padding: 20px 40px;
+    margin: 0;
+  }
+}
+.navbar .container .navbar-titles ul li .active-page::after {
+  display: block;
+  content: "";
+  width: 24px;
+  margin: auto;
+  margin-top: 3px;
+  border-bottom: 3px solid #4dc8f1;
+  transition: width ease-in-out 0.3s;
+}
+@media only screen and (max-width: 1280px) {
+  .navbar .container .navbar-titles ul li .active-page::after {
+    border-bottom: 3px solid #fff;
+  }
+}
+
+.pages .home, .pages .resume, .pages .blog, .pages .contact, .pages .service {
+  display: none;
+  max-width: 1000px;
+  height: auto;
+  margin: 30px auto;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 10px 30px 0px #a5a3a3;
+}
+@media only screen and (max-width: 1032px) {
+  .pages .home, .pages .resume, .pages .blog, .pages .contact, .pages .service {
+    margin: 15px;
+  }
+}
+.pages .home-header {
+  height: 258px;
+  background-color: #4dc8f1;
+  display: flex;
+  padding-top: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-header {
+    height: auto;
+    display: block;
+    flex-wrap: wrap;
+    padding-bottom: 32px;
+    padding: 32px;
+  }
+}
+.pages .home-header__img {
+  width: 30%;
+  height: fit-content;
+  margin-left: 64px;
+  padding: 0;
+  transform: translateY(30px);
+  background-color: #fff;
+  border: 3px solid #fff;
+  box-shadow: 0px 2px 10px 0px #a5a3a3;
+  transition: transform ease 0.5s, box-shadow ease 0.5s;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-header__img {
+    max-width: 200px;
+    width: 100%;
+    margin: auto;
+    padding-left: 0;
+  }
+}
+.pages .home-header__img img {
+  display: block;
+  width: 100%;
+}
+.pages .home-header__img:hover {
+  transform: translateY(20px);
+  box-shadow: 0px 10px 30px 0px #a5a3a3;
+  transition: all ease 0.5s;
+}
+.pages .home-header__title {
+  width: 70%;
+  text-align: center;
+  padding: 0 64px;
+  color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-header__title {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+  }
+}
+.pages .home-header__title .title-name {
+  margin: 32px 0 16px;
+  font-size: 48px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-header__title .title-name {
+    max-width: 70%;
+    margin: 48px auto 0;
+  }
+}
+.pages .home-header__title .title-info {
+  font-size: 18px;
+}
+.pages .home-header__title .title-socialMedias a {
+  text-decoration: none;
+}
+.pages .home-header__title .title-socialMedias__twitter img {
+  width: 50px;
+  height: 50px;
+}
+.pages .home-header__title .title-socialMedias__github img {
+  width: 50px;
+  height: 50px;
+}
+.pages .home-header__title .title-socialMedias__instagram img {
+  width: 50px;
+  height: 50px;
+}
+.pages .home-main {
+  background-color: #fff;
+  display: flex;
+  padding: 32px 64px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-main {
+    display: block;
+    padding: 32px;
+  }
+}
+.pages .home-main__description {
+  width: 50%;
+  padding-right: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-main__description {
+    width: 100%;
+  }
+}
+.pages .home-main__description .aboutMe {
+  margin: 0;
+}
+.pages .home-main__description .aboutMe-me {
+  color: #109ac8;
+}
+.pages .home-main__description .description {
+  font-size: 14px;
+  line-height: 28px;
+  color: #302f2f;
+}
+.pages .home-main__info {
+  width: 50%;
+  padding-left: 30px;
+  font-size: 14px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .home-main__info {
+    width: 100%;
+    padding-left: 0;
+  }
+}
+.pages .home-main__info .title {
+  width: 100px;
+}
+.pages .home-main__info .info {
+  height: auto;
+  line-height: 28px;
+  color: #868585;
+}
+.pages .resume, .pages .blog, .pages .contact, .pages .service {
+  display: none;
+}
+.pages .resume-header, .pages .blog-header, .pages .contact-header, .pages .service-header {
+  text-align: center;
+  background-color: #4dc8f1;
+}
+.pages .resume-header__title, .pages .blog-header__title, .pages .contact-header__title, .pages .service-header__title {
+  margin: 0 auto;
+  padding: 20px 0;
+  color: #fff;
+  font-size: 48px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .resume-header__title, .pages .blog-header__title, .pages .contact-header__title, .pages .service-header__title {
+    font-size: 32px;
+  }
+}
+.pages .resume-main, .pages .blog-main, .pages .contact-main {
+  display: flex;
+  padding: 0px 50px 30px;
+  background-color: #fff;
+}
+@media only screen and (max-width: 768px) {
+  .pages .resume-main, .pages .blog-main, .pages .contact-main {
+    flex-wrap: wrap;
+    padding: 0 15px;
+  }
+}
+.pages .resume-main__education, .pages .contact-main__touch, .pages .contact-main__form, .pages .resume-main__experience {
+  width: 50%;
+  flex-grow: 1;
+  margin: 15px;
+  padding-right: 15px;
+}
+.pages .resume-main__education .education-courses, .pages .contact-main__touch .education-courses, .pages .contact-main__form .education-courses, .pages .resume-main__education .resume-main__experience .experience-work, .pages .resume-main__experience .resume-main__education .experience-work, .pages .resume-main__experience .education-courses, .pages .resume-main__experience .experience-work {
+  border-left: 2px solid #ccc;
+  padding: 10px 0 10px 30px;
+}
+.pages .resume-main__education .education-courses .webFullStack, .pages .contact-main__touch .education-courses .webFullStack, .pages .contact-main__form .education-courses .webFullStack, .pages .resume-main__experience .education-courses .webFullStack, .pages .resume-main__experience .experience-work .webFullStack, .pages .resume-main__experience .experience-work .Designer, .pages .resume-main__experience .experience-work .webFrontEnd, .pages .resume-main__experience .experience-work .webDevelop, .pages .resume-main__education .education-courses .university, .pages .contact-main__touch .education-courses .university, .pages .contact-main__form .education-courses .university, .pages .resume-main__experience .education-courses .university, .pages .resume-main__experience .experience-work .university, .pages .resume-main__education .education-courses .englishClass, .pages .contact-main__touch .education-courses .englishClass, .pages .contact-main__form .education-courses .englishClass, .pages .resume-main__experience .education-courses .englishClass, .pages .resume-main__experience .experience-work .englishClass {
+  position: relative;
+  width: 95%;
+  height: auto;
+  margin: 15px 0;
+  padding: 15px;
+  border-left: 2px solid #4dc8f1;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 3px #f0eeee;
+}
+.pages .resume-main__education .education-courses .webFullStack::before, .pages .contact-main__touch .education-courses .webFullStack::before, .pages .contact-main__form .education-courses .webFullStack::before, .pages .resume-main__experience .education-courses .webFullStack::before, .pages .resume-main__experience .experience-work .webFullStack::before, .pages .resume-main__experience .experience-work .Designer::before, .pages .resume-main__experience .experience-work .webFrontEnd::before, .pages .resume-main__experience .experience-work .webDevelop::before, .pages .resume-main__education .education-courses .university::before, .pages .contact-main__touch .education-courses .university::before, .pages .contact-main__form .education-courses .university::before, .pages .resume-main__experience .education-courses .university::before, .pages .resume-main__experience .experience-work .university::before, .pages .resume-main__education .education-courses .englishClass::before, .pages .contact-main__touch .education-courses .englishClass::before, .pages .contact-main__form .education-courses .englishClass::before, .pages .resume-main__experience .education-courses .englishClass::before, .pages .resume-main__experience .experience-work .englishClass::before {
+  content: "";
+  position: absolute;
+  left: -40px;
+  top: 10px;
+  background-color: #fff;
+  width: 10px;
+  height: 10px;
+  border: 2px solid #4dc8f1;
+  border-radius: 50%;
+}
+.pages .resume-main__education .education-courses .webFullStack::after, .pages .contact-main__touch .education-courses .webFullStack::after, .pages .contact-main__form .education-courses .webFullStack::after, .pages .resume-main__experience .education-courses .webFullStack::after, .pages .resume-main__experience .experience-work .webFullStack::after, .pages .resume-main__experience .experience-work .Designer::after, .pages .resume-main__experience .experience-work .webFrontEnd::after, .pages .resume-main__experience .experience-work .webDevelop::after, .pages .resume-main__education .education-courses .university::after, .pages .contact-main__touch .education-courses .university::after, .pages .contact-main__form .education-courses .university::after, .pages .resume-main__experience .education-courses .university::after, .pages .resume-main__experience .experience-work .university::after, .pages .resume-main__education .education-courses .englishClass::after, .pages .contact-main__touch .education-courses .englishClass::after, .pages .contact-main__form .education-courses .englishClass::after, .pages .resume-main__experience .education-courses .englishClass::after, .pages .resume-main__experience .experience-work .englishClass::after {
+  content: "";
+  position: absolute;
+  left: -27px;
+  top: 14px;
+  width: 26px;
+  height: 2px;
+  border-bottom: 2px solid #4dc8f1;
+}
+.pages .resume-main__education .education-courses .webFullStack:hover, .pages .contact-main__touch .education-courses .webFullStack:hover, .pages .contact-main__form .education-courses .webFullStack:hover, .pages .resume-main__experience .education-courses .webFullStack:hover, .pages .resume-main__experience .experience-work .webFullStack:hover, .pages .resume-main__experience .experience-work .Designer:hover, .pages .resume-main__experience .experience-work .webFrontEnd:hover, .pages .resume-main__experience .experience-work .webDevelop:hover, .pages .resume-main__education .education-courses .university:hover, .pages .contact-main__touch .education-courses .university:hover, .pages .contact-main__form .education-courses .university:hover, .pages .resume-main__experience .education-courses .university:hover, .pages .resume-main__experience .experience-work .university:hover, .pages .resume-main__education .education-courses .englishClass:hover, .pages .contact-main__touch .education-courses .englishClass:hover, .pages .contact-main__form .education-courses .englishClass:hover, .pages .resume-main__experience .education-courses .englishClass:hover, .pages .resume-main__experience .experience-work .englishClass:hover {
+  box-shadow: 0px 0px 10px 3px #dbdada;
+}
+.pages .resume-main__education .education-courses .webFullStack h4, .pages .contact-main__touch .education-courses .webFullStack h4, .pages .contact-main__form .education-courses .webFullStack h4, .pages .resume-main__experience .education-courses .webFullStack h4, .pages .resume-main__experience .experience-work .webFullStack h4, .pages .resume-main__experience .experience-work .Designer h4, .pages .resume-main__experience .experience-work .webFrontEnd h4, .pages .resume-main__experience .experience-work .webDevelop h4, .pages .resume-main__education .education-courses .university h4, .pages .contact-main__touch .education-courses .university h4, .pages .contact-main__form .education-courses .university h4, .pages .resume-main__experience .education-courses .university h4, .pages .resume-main__experience .experience-work .university h4, .pages .resume-main__education .education-courses .englishClass h4, .pages .contact-main__touch .education-courses .englishClass h4, .pages .contact-main__form .education-courses .englishClass h4, .pages .resume-main__experience .education-courses .englishClass h4, .pages .resume-main__experience .experience-work .englishClass h4 {
+  margin: 10px 0;
+}
+.pages .resume-main__education .education-courses .webFullStack .year, .pages .contact-main__touch .education-courses .webFullStack .year, .pages .contact-main__form .education-courses .webFullStack .year, .pages .resume-main__experience .education-courses .webFullStack .year, .pages .resume-main__experience .experience-work .webFullStack .year, .pages .resume-main__experience .experience-work .Designer .year, .pages .resume-main__experience .experience-work .webFrontEnd .year, .pages .resume-main__experience .experience-work .webDevelop .year, .pages .resume-main__education .education-courses .university .year, .pages .contact-main__touch .education-courses .university .year, .pages .contact-main__form .education-courses .university .year, .pages .resume-main__experience .education-courses .university .year, .pages .resume-main__experience .experience-work .university .year, .pages .resume-main__education .education-courses .englishClass .year, .pages .contact-main__touch .education-courses .englishClass .year, .pages .contact-main__form .education-courses .englishClass .year, .pages .resume-main__experience .education-courses .englishClass .year, .pages .resume-main__experience .experience-work .englishClass .year {
+  color: #109ac8;
+}
+.pages .resume-main__education .education-courses .webFullStack span, .pages .contact-main__touch .education-courses .webFullStack span, .pages .contact-main__form .education-courses .webFullStack span, .pages .resume-main__experience .education-courses .webFullStack span, .pages .resume-main__experience .experience-work .webFullStack span, .pages .resume-main__experience .experience-work .Designer span, .pages .resume-main__experience .experience-work .webFrontEnd span, .pages .resume-main__experience .experience-work .webDevelop span, .pages .resume-main__education .education-courses .university span, .pages .contact-main__touch .education-courses .university span, .pages .contact-main__form .education-courses .university span, .pages .resume-main__experience .education-courses .university span, .pages .resume-main__experience .experience-work .university span, .pages .resume-main__education .education-courses .englishClass span, .pages .contact-main__touch .education-courses .englishClass span, .pages .contact-main__form .education-courses .englishClass span, .pages .resume-main__experience .education-courses .englishClass span, .pages .resume-main__experience .experience-work .englishClass span {
+  font-size: 14px;
+}
+.pages .resume-main__education .education-courses .webFullStack p, .pages .contact-main__touch .education-courses .webFullStack p, .pages .contact-main__form .education-courses .webFullStack p, .pages .resume-main__experience .education-courses .webFullStack p, .pages .resume-main__experience .experience-work .webFullStack p, .pages .resume-main__experience .experience-work .Designer p, .pages .resume-main__experience .experience-work .webFrontEnd p, .pages .resume-main__experience .experience-work .webDevelop p, .pages .resume-main__education .education-courses .university p, .pages .contact-main__touch .education-courses .university p, .pages .contact-main__form .education-courses .university p, .pages .resume-main__experience .education-courses .university p, .pages .resume-main__experience .experience-work .university p, .pages .resume-main__education .education-courses .englishClass p, .pages .contact-main__touch .education-courses .englishClass p, .pages .contact-main__form .education-courses .englishClass p, .pages .resume-main__experience .education-courses .englishClass p, .pages .resume-main__experience .experience-work .englishClass p {
+  font-size: 14px;
+}
+.pages .service {
+  display: none;
+}
+.pages .service-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fff;
+  padding: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .service-main {
+    flex-wrap: wrap;
+    padding: 15px;
+  }
+}
+.pages .service-main__html, .pages .service-main__node, .pages .service-main__react, .pages .service-main__bootstrap, .pages .service-main__javascript, .pages .service-main__css {
+  max-width: 250px;
+  text-align: center;
+  padding: 15px;
+}
+.pages .service-main__html .img, .pages .service-main__node .img, .pages .service-main__react .img, .pages .service-main__bootstrap .img, .pages .service-main__javascript .img, .pages .service-main__css .img {
+  min-width: 80px;
+  width: 30%;
+  height: 30%;
+  margin: 0 auto;
+}
+.pages .service-main__html .img img, .pages .service-main__node .img img, .pages .service-main__react .img img, .pages .service-main__bootstrap .img img, .pages .service-main__javascript .img img, .pages .service-main__css .img img {
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.5s;
+  border-radius: 10px;
+}
+.pages .service-main__html .img img:hover, .pages .service-main__node .img img:hover, .pages .service-main__react .img img:hover, .pages .service-main__bootstrap .img img:hover, .pages .service-main__javascript .img img:hover, .pages .service-main__css .img img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 5px 10px 5px #ccc;
+  background-clip: content-box;
+  transition: all ease 0.5s;
+}
+.pages .service-main__html p, .pages .service-main__node p, .pages .service-main__react p, .pages .service-main__bootstrap p, .pages .service-main__javascript p, .pages .service-main__css p {
+  font-size: 14px;
+}
+.pages .contact {
+  display: none;
+}
+.pages .contact-main {
+  padding-bottom: 30px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .contact-main__touch, .pages .contact-main__form {
+    padding-right: 0;
+  }
+}
+.pages .contact-main__touch .touch-title__touch, .pages .contact-main__form .touch-title__touch {
+  color: #4dc8f1;
+}
+.pages .contact-main__touch .mapouter, .pages .contact-main__form .mapouter {
+  position: relative;
+  text-align: right;
+  height: 200px;
+  width: 100%;
+  margin-top: 30px;
+}
+.pages .contact-main__touch .mapouter .gmap_canvas, .pages .contact-main__form .mapouter .gmap_canvas {
+  overflow: hidden;
+  background: none !important;
+  height: 200px;
+  width: 100%;
+}
+.pages .contact-main__touch .touch-info, .pages .contact-main__form .touch-info {
+  margin-top: 20px;
+  font-size: 14px;
+}
+.pages .contact-main__touch .touch-info .info-location, .pages .contact-main__form .touch-info .info-location, .pages .contact-main__touch .touch-info .info-phone, .pages .contact-main__form .touch-info .info-phone, .pages .contact-main__touch .touch-info .info-email, .pages .contact-main__form .touch-info .info-email {
+  width: 50px;
+  height: 40px;
+  font-family: "icomoon";
+  color: #4dc8f1;
+  font-size: 20px;
+}
+.pages .contact-main__form .form-title__form {
+  color: #4dc8f1;
+}
+.pages .contact-main__form form {
+  width: 100%;
+}
+.pages .contact-main__form form .input {
+  position: relative;
+  margin: 30px 0;
+}
+.pages .contact-main__form form .input input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 30px;
+  outline: none;
+  border: none;
+  background-color: #f1eeee;
+  padding: 10px;
+}
+.pages .contact-main__form form .input textarea {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100px;
+  outline: none;
+  border: none;
+  background-color: #f1eeee;
+  padding: 10px;
+}
+.pages .contact-main__form form .input label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  font-size: 14px;
+  color: #ccc;
+}
+.pages .contact-main__form form .input span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: block;
+  box-sizing: border-box;
+  width: 0;
+  height: 0px;
+  border: 0px solid #4dc8f1;
+}
+.pages .contact-main__form form .submit {
+  width: 100%;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+  border: 1px solid #4dc8f1;
+  border-radius: 10px;
+  background-color: #f1eeee;
+  transition: all ease 0.8s;
+}
+.pages .contact-main__form form .submit:hover {
+  background-color: #4dc8f1;
+  transition: all ease 0.6s;
+}
+.pages .blog {
+  display: none;
+}
+.pages .blog-main {
+  height: 500px;
+  font-size: 32px;
+}
+@media only screen and (max-width: 768px) {
+  .pages .blog-main {
+    font-size: 20px;
+  }
+}
+.pages .page-current {
+  display: block;
+}
+
+/*# sourceMappingURL=style.css.map */
