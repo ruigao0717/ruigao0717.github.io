@@ -1,14 +1,13 @@
-@import 'mixin.scss';
-$primary-color:#4dc8f1;
-$gray:#868585;
+@import "mixin.scss";
+$primary-color: #4dc8f1;
+$gray: #868585;
 
 @font-face {
-    font-family: 'icomoon';
-    src: url('../fonts/icomoon.eot?8bij9n');
-    src: url('../fonts/icomoon.eot?8bij9n#iefix') format('embedded-opentype'),
-        url('../fonts/icomoon.ttf?8bij9n') format('truetype'),
-        url('../fonts/icomoon.woff?8bij9n') format('woff'),
-        url('../fonts/icomoon.svg?8bij9n#icomoon') format('svg');
+    font-family: "icomoon";
+    src: url("../fonts/icomoon.eot?8bij9n");
+    src: url("../fonts/icomoon.eot?8bij9n#iefix") format("embedded-opentype"),
+        url("../fonts/icomoon.ttf?8bij9n") format("truetype"), url("../fonts/icomoon.woff?8bij9n") format("woff"),
+        url("../fonts/icomoon.svg?8bij9n#icomoon") format("svg");
     font-weight: normal;
     font-style: normal;
     font-display: block;
@@ -19,7 +18,7 @@ html {
 body {
     background-color: #e4e2e2;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     // overflow-x: hidden;
 }
 .navbar {
@@ -29,7 +28,7 @@ body {
     z-index: 1;
     @media only screen and (max-width: $M) {
         background-color: $primary-color;
-        box-shadow: 0px 5px 10px 0px rgba(0,0,0,0.1);
+        box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.1);
     }
     .container {
         max-width: 1000px;
@@ -41,17 +40,17 @@ body {
             max-width: 1000px;
         }
         @media only screen and (max-width: 1032px) {
-            padding:0 15px;
+            padding: 0 15px;
             box-sizing: border-box;
         }
         .navbar-name {
             @media only screen and (max-width: $M) {
                 color: #fff;
-                }
+            }
             span {
                 color: $primary-color;
                 @media only screen and (max-width: $M) {
-                color: #fff;
+                    color: #fff;
                 }
             }
         }
@@ -59,15 +58,15 @@ body {
             .navbar-titles__tag {
                 display: none;
                 @media only screen and (max-width: $M) {
-                        display: block;
-                    }
+                    display: block;
+                }
                 &:hover {
                     cursor: pointer;
                 }
             }
             ul {
                 @media only screen and (min-width: $M + 1) {
-                display: block;
+                    display: block;
                 }
                 @media only screen and (max-width: $M) {
                     display: none;
@@ -95,26 +94,26 @@ body {
                         display: inline-block;
                         margin-left: 40px;
                         text-decoration: none;
-                        color:$gray;
+                        color: $gray;
                         transition: all ease 0.3s;
                         @media only screen and (max-width: $M) {
-                            padding:20px 40px;
+                            padding: 20px 40px;
                             margin: 0;
-                            }
+                        }
                         &:hover {
                             color: #1b1b1b;
                             transition: all ease 0.3s;
                         }
                         &::after {
-                           display: block;
-                           content: "";
-                           width: 0;
-                           margin: auto;
-                           margin-top: 3px;
-                           border-bottom: 3px solid $primary-color;
-                           transition: width ease-in-out 0.3s;
-                           @media only screen and (max-width: $M) {
-                            border-bottom: 3px solid #fff;
+                            display: block;
+                            content: "";
+                            width: 0;
+                            margin: auto;
+                            margin-top: 3px;
+                            border-bottom: 3px solid $primary-color;
+                            transition: width ease-in-out 0.3s;
+                            @media only screen and (max-width: $M) {
+                                border-bottom: 3px solid #fff;
                             }
                         }
                         &:hover::after {
@@ -126,10 +125,10 @@ body {
                         display: inline-block;
                         margin-left: 40px;
                         text-decoration: none;
-                        color:#1b1b1b;
+                        color: #1b1b1b;
                         transition: all ease 0.3s;
                         @media only screen and (max-width: $M) {
-                            padding:20px 40px;
+                            padding: 20px 40px;
                             margin: 0;
                         }
                         &::after {
@@ -141,29 +140,41 @@ body {
                             border-bottom: 3px solid $primary-color;
                             transition: width ease-in-out 0.3s;
                             @media only screen and (max-width: $M) {
-                             border-bottom: 3px solid #fff;
+                                border-bottom: 3px solid #fff;
                             }
                         }
                     }
                 }
             }
-            
         }
     }
 }
 
 .pages {
-    .home{
-        display: none;
-        max-width: 1000px;
+    margin: 0 auto;
+    max-width: 1000px;
+    position: relative;
+    perspective: 500px;
+    @media only screen and (max-width: 1032px) {
+        margin: 15px;
+    }
+    .home {
+        position: absolute;
+        visibility: hidden;
+        // max-width: 1000px;
+        width: 100%;
         height: auto;
         margin: 30px auto;
-        border-radius:20px;
+        border-radius: 20px;
         overflow: hidden;
         box-shadow: 0px 10px 30px 0px #a5a3a3;
-        @media only screen and (max-width:1032px) {
-            margin:15px;
-        }
+        transform-origin: 50% 50% -3000px;
+        transform: rotateY(180deg);
+        transition: all ease-in-out 1s;
+        backface-visibility: hidden;
+        // @media only screen and (max-width:1032px) {
+        //     margin:15px;
+        // }
         &-header {
             height: 258px;
             background-color: $primary-color;
@@ -171,7 +182,7 @@ body {
             padding-top: 32px;
             @include MQ(S) {
                 height: auto;
-                display:block;
+                display: block;
                 flex-wrap: wrap;
                 padding-bottom: 32px;
                 padding: 32px;
@@ -208,7 +219,7 @@ body {
                 text-align: center;
                 padding: 0 64px;
                 color: #fff;
-                @include MQ(S){
+                @include MQ(S) {
                     width: 100%;
                     margin: auto;
                     padding: 0;
@@ -216,7 +227,7 @@ body {
                 .title-name {
                     margin: 32px 0 16px;
                     font-size: 48px;
-                    @include MQ(S){
+                    @include MQ(S) {
                         max-width: 70%;
                         margin: 48px auto 0;
                     }
@@ -230,20 +241,20 @@ body {
                     }
                     &__twitter {
                         img {
-                            width: 50px;
-                            height: 50px;
+                            width: 30px;
+                            height: 30px;
                         }
                     }
-                    &__github{
-                         img{
-                        width: 50px;
-                        height: 50px;
+                    &__github {
+                        img {
+                            width: 30px;
+                            height: 30px;
                         }
                     }
-                    &__instagram{ 
-                        img{
-                        width: 50px;
-                        height: 50px;
+                    &__linkedin {
+                        img {
+                            width: 30px;
+                            height: 30px;
                         }
                     }
                 }
@@ -252,7 +263,7 @@ body {
         &-main {
             background-color: #fff;
             display: flex;
-            padding:32px 64px;
+            padding: 32px 64px;
             @include MQ(S) {
                 display: block;
                 padding: 32px;
@@ -260,7 +271,7 @@ body {
             &__description {
                 width: 50%;
                 padding-right: 30px;
-                @include MQ(S){
+                @include MQ(S) {
                     width: 100%;
                 }
                 .aboutMe {
@@ -272,7 +283,7 @@ body {
                 .description {
                     font-size: 14px;
                     line-height: 28px;
-                    color:  #302f2f;
+                    color: #302f2f;
                 }
             }
             &__info {
@@ -283,25 +294,24 @@ body {
                     width: 100%;
                     padding-left: 0;
                 }
-                .title{
+                .title {
                     width: 100px;
                 }
-                .info{
+                .info {
                     height: auto;
                     line-height: 28px;
-                    color:$gray;
+                    color: $gray;
                 }
             }
         }
     }
 
-    .resume{
-        display: none;
+    .resume {
         @extend .home;
         &-header {
             text-align: center;
             background-color: $primary-color;
-            &__title{
+            &__title {
                 margin: 0 auto;
                 padding: 20px 0;
                 color: #fff;
@@ -324,10 +334,10 @@ body {
                 flex-grow: 1;
                 margin: 15px;
                 padding-right: 15px;
-                .education-courses{
+                .education-courses {
                     border-left: 2px solid #ccc;
-                    padding:10px 0 10px 30px;
-                    .webFullStack{
+                    padding: 10px 0 10px 30px;
+                    .webFullStack {
                         position: relative;
                         width: 95%;
                         height: auto;
@@ -347,7 +357,7 @@ body {
                             border: 2px solid $primary-color;
                             border-radius: 50%;
                         }
-                        &::after{
+                        &::after {
                             content: "";
                             position: absolute;
                             left: -27px;
@@ -372,17 +382,17 @@ body {
                             font-size: 14px;
                         }
                     }
-                    .englishClass{
+                    .englishClass {
                         @extend .webFullStack;
                     }
-                    .university{
+                    .university {
                         @extend .webFullStack;
                     }
-                } 
+                }
             }
             &__experience {
                 @extend .resume-main__education;
-                .experience-work{
+                .experience-work {
                     @extend .education-courses;
                     .webDevelop {
                         @extend .webFullStack;
@@ -399,11 +409,10 @@ body {
     }
 
     .service {
-        display: none;
         @extend .resume;
         &-header {
             @extend .resume-header;
-            &__title{
+            &__title {
                 @extend .resume-header__title;
             }
         }
@@ -440,7 +449,7 @@ body {
                     }
                 }
                 p {
-                    font-size: 14px
+                    font-size: 14px;
                 }
             }
             &__css {
@@ -462,7 +471,6 @@ body {
     }
 
     .contact {
-        display: none;
         @extend .resume;
         &-header {
             @extend .resume-header;
@@ -479,7 +487,7 @@ body {
                     padding-right: 0;
                 }
                 .touch-title {
-                    &__touch{
+                    &__touch {
                         color: $primary-color;
                     }
                 }
@@ -502,7 +510,7 @@ body {
                     .info-location {
                         width: 50px;
                         height: 40px;
-                        font-family: 'icomoon';
+                        font-family: "icomoon";
                         color: $primary-color;
                         font-size: 20px;
                     }
@@ -556,7 +564,7 @@ body {
                             position: absolute;
                             bottom: 0;
                             left: 0;
-                            display:block;
+                            display: block;
                             box-sizing: border-box;
                             width: 0;
                             height: 0px;
@@ -573,7 +581,7 @@ body {
                         background-color: #f1eeee;
                         transition: all ease 0.8s;
                         &:hover {
-                            background-color:$primary-color;
+                            background-color: $primary-color;
                             transition: all ease 0.6s;
                         }
                     }
@@ -583,11 +591,10 @@ body {
     }
 
     .blog {
-        display: none;
         @extend .resume;
         &-header {
             @extend .resume-header;
-            &__title{
+            &__title {
                 @extend .resume-header__title;
             }
         }
@@ -595,12 +602,23 @@ body {
             @extend .resume-main;
             height: 500px;
             font-size: 32px;
-            @include MQ(S){
+            @include MQ(S) {
                 font-size: 20px;
             }
         }
     }
+
     .page-current {
-        display: block;
+        visibility: visible;
+        transform-origin: 50% 50% -3000px;
+        transform: rotateY(0deg);
+        transition: all ease-in-out 1s;
+    }
+
+    .page-leave {
+        visibility: hidden;
+        transform-origin: 50% 50% -3000px;
+        transform: rotateY(-180deg);
+        transition: all ease-in-out 1s;
     }
 }

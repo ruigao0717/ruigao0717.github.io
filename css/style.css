@@ -165,19 +165,30 @@ body {
   }
 }
 
-.pages .home, .pages .resume, .pages .blog, .pages .contact, .pages .service {
-  display: none;
+.pages {
+  margin: 0 auto;
   max-width: 1000px;
+  position: relative;
+  perspective: 500px;
+}
+@media only screen and (max-width: 1032px) {
+  .pages {
+    margin: 15px;
+  }
+}
+.pages .home, .pages .resume, .pages .blog, .pages .contact, .pages .service {
+  position: absolute;
+  visibility: hidden;
+  width: 100%;
   height: auto;
   margin: 30px auto;
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0px 10px 30px 0px #a5a3a3;
-}
-@media only screen and (max-width: 1032px) {
-  .pages .home, .pages .resume, .pages .blog, .pages .contact, .pages .service {
-    margin: 15px;
-  }
+  transform-origin: 50% 50% -3000px;
+  transform: rotateY(180deg);
+  transition: all ease-in-out 1s;
+  backface-visibility: hidden;
 }
 .pages .home-header {
   height: 258px;
@@ -252,16 +263,16 @@ body {
   text-decoration: none;
 }
 .pages .home-header__title .title-socialMedias__twitter img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
 .pages .home-header__title .title-socialMedias__github img {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
 }
-.pages .home-header__title .title-socialMedias__instagram img {
-  width: 50px;
-  height: 50px;
+.pages .home-header__title .title-socialMedias__linkedin img {
+  width: 30px;
+  height: 30px;
 }
 .pages .home-main {
   background-color: #fff;
@@ -312,9 +323,6 @@ body {
   height: auto;
   line-height: 28px;
   color: #868585;
-}
-.pages .resume, .pages .blog, .pages .contact, .pages .service {
-  display: none;
 }
 .pages .resume-header, .pages .blog-header, .pages .contact-header, .pages .service-header {
   text-align: center;
@@ -397,9 +405,6 @@ body {
 .pages .resume-main__education .education-courses .webFullStack p, .pages .contact-main__touch .education-courses .webFullStack p, .pages .contact-main__form .education-courses .webFullStack p, .pages .resume-main__experience .education-courses .webFullStack p, .pages .resume-main__experience .experience-work .webFullStack p, .pages .resume-main__experience .experience-work .Designer p, .pages .resume-main__experience .experience-work .webFrontEnd p, .pages .resume-main__experience .experience-work .webDevelop p, .pages .resume-main__education .education-courses .university p, .pages .contact-main__touch .education-courses .university p, .pages .contact-main__form .education-courses .university p, .pages .resume-main__experience .education-courses .university p, .pages .resume-main__experience .experience-work .university p, .pages .resume-main__education .education-courses .englishClass p, .pages .contact-main__touch .education-courses .englishClass p, .pages .contact-main__form .education-courses .englishClass p, .pages .resume-main__experience .education-courses .englishClass p, .pages .resume-main__experience .experience-work .englishClass p {
   font-size: 14px;
 }
-.pages .service {
-  display: none;
-}
 .pages .service-main {
   display: flex;
   flex-wrap: wrap;
@@ -438,9 +443,6 @@ body {
 }
 .pages .service-main__html p, .pages .service-main__node p, .pages .service-main__react p, .pages .service-main__bootstrap p, .pages .service-main__javascript p, .pages .service-main__css p {
   font-size: 14px;
-}
-.pages .contact {
-  display: none;
 }
 .pages .contact-main {
   padding-bottom: 30px;
@@ -537,9 +539,6 @@ body {
   background-color: #4dc8f1;
   transition: all ease 0.6s;
 }
-.pages .blog {
-  display: none;
-}
 .pages .blog-main {
   height: 500px;
   font-size: 32px;
@@ -550,7 +549,16 @@ body {
   }
 }
 .pages .page-current {
-  display: block;
+  visibility: visible;
+  transform-origin: 50% 50% -3000px;
+  transform: rotateY(0deg);
+  transition: all ease-in-out 1s;
+}
+.pages .page-leave {
+  visibility: hidden;
+  transform-origin: 50% 50% -3000px;
+  transform: rotateY(-180deg);
+  transition: all ease-in-out 1s;
 }
 
 /*# sourceMappingURL=style.css.map */

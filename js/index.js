@@ -11,7 +11,15 @@ pagebuttons.forEach((i, index) => {
     i.addEventListener('click', () => {
         if (document.body.offsetWidth <= 1280) { //document.body.offsetWidth
             pages.forEach(j => {
-                j.classList.remove('page-current');
+                for (let i = 0; i < j.classList.length; i++) {
+                    if (j.classList[i] === 'page-current') {
+                        j.classList.remove('page-current');
+                        j.classList.add('page-leave');
+                        setTimeout(() => {
+                            j.classList.remove('page-leave');
+                        }, 1000);
+                    }
+                }
             })
             pagebuttons.forEach((i, index) => {
                 i.classList.remove('active-page');
@@ -22,7 +30,15 @@ pagebuttons.forEach((i, index) => {
             menuBar.style.transition = 'display ease 1s';//it looks like it doesn't work
         } else {
             pages.forEach(j => {
-                j.classList.remove('page-current');
+                for (let i = 0; i < j.classList.length; i++) {
+                    if (j.classList[i] === 'page-current') {
+                        j.classList.remove('page-current');
+                        j.classList.add('page-leave');
+                        setTimeout(() => {
+                            j.classList.remove('page-leave');
+                        }, 1000);
+                    }
+                }
             })
             pagebuttons.forEach((i, index) => {
                 i.classList.remove('active-page');
